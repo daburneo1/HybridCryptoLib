@@ -6,11 +6,11 @@ namespace Application.services;
 public class HybridEncryptionService(IEncryptionAlgorithm aesAlgorithm, IEncryptionAlgorithm rsaAlgorithm)
     : IEncryptionService
 {
-    public EncryptedData EncryptData(byte[] data, EncryptionKey publicKey)
+    public byte[] EncryptData(byte[] data, EncryptionKey publicKey)
     {
         var aesEncryptedData = aesAlgorithm.Encrypt(data, publicKey);
         var rsaEncryptedData = rsaAlgorithm.Encrypt(aesEncryptedData.Data, publicKey);
-        return new EncryptedData(rsaEncryptedData.Data, true);
+        return rsaEncryptedData.Data;
     }
 
     public byte[] DecryptData(EncryptedData encryptedData, EncryptionKey privateKey)

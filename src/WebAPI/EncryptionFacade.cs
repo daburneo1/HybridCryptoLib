@@ -12,15 +12,17 @@ public class EncryptionFacade
         _encryptionService = encryptionService;
     }
 
-    public EncryptedData EncryptData(byte[] data, EncryptionKey publicKey)
+    public string EncryptData(byte[] data, EncryptionKey publicKey)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
-        return _encryptionService.EncryptData(data, publicKey);
+        var encryptedData = _encryptionService.EncryptData(data, publicKey);
+        return Convert.ToBase64String(encryptedData);
     }
 
-    public byte[] DecryptData(EncryptedData encryptedData, EncryptionKey privateKey)
+    public byte[] DecryptData(string encryptedData, EncryptionKey privateKey)
     {
         if (encryptedData == null) throw new ArgumentNullException(nameof(encryptedData));
-        return _encryptionService.DecryptData(encryptedData, privateKey);
+        var encryptedBytes = Convert.FromBase64String(encryptedData);
+        return _encryptionService.DecryptData(new EncryptedData(encryptedBytes, true), privateKey);
     }
 }
