@@ -1,9 +1,10 @@
 ﻿using Domain;
 
-namespace Application.interfaces;
-
-public interface IEncryptionService
+namespace Application.interfaces
 {
-    byte[] EncryptData(byte[] data, EncryptionKey publicKey);
-    byte[] DecryptData(EncryptedData encryptedData, EncryptionKey privateKey);
+    public interface IEncryptionService
+    {
+        (byte[] EncryptedData, byte[] EncryptedHash) EncryptData(string plainText, string hash, EncryptionKey publicKey);
+        string DecryptData(byte[] encryptedData, byte[] encryptedHash, EncryptionKey privateKey);
+    }
 }

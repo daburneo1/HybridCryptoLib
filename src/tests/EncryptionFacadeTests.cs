@@ -1,95 +1,85 @@
-﻿using System.Text;
-using Application.interfaces;
-using Domain;
-using Moq;
-using WebAPI;
-using Xunit;
-
+﻿
 namespace Tests
 {
+    using Xunit;
+    using Moq;
+    using Application.interfaces;
+    using Domain;
+    using WebAPI;
+    using System;
+
     public class EncryptionFacadeTests
     {
-        [Fact]
-        public void EncryptData_ReturnsEncryptedString_WhenValidInput()
+        private readonly Mock<IEncryptionService> _mockEncryptionService;
+        private readonly EncryptionFacade _encryptionFacade;
+
+        public EncryptionFacadeTests()
         {
-            // Arrange
-            var encryptionServiceMock = new Mock<IEncryptionService>();
-            var encryptionFacade = new EncryptionFacade(encryptionServiceMock.Object);
-            var data = Encoding.UTF8.GetBytes("test data");
-            var publicKey = new EncryptionKey("publicKey");
-            var expectedEncryptedData = Convert.ToBase64String(new byte[] { 1, 2, 3 });
-
-            encryptionServiceMock.Setup(es => es.EncryptData(data, publicKey)).Returns(Convert.FromBase64String(expectedEncryptedData));
-
-            // Act
-            var result = encryptionFacade.EncryptData(data, publicKey);
-
-            // Assert
-            Assert.Equal(expectedEncryptedData, result);
+            _mockEncryptionService = new Mock<IEncryptionService>();
+            _encryptionFacade = new EncryptionFacade(_mockEncryptionService.Object);
         }
 
         [Fact]
-        public void DecryptData_ReturnsDecryptedData_WhenValidInput()
+        public void EncryptData_ValidInput_ReturnsEncryptedDataAndHash()
         {
-            // Arrange
-            var encryptionServiceMock = new Mock<IEncryptionService>();
-            var encryptionFacade = new EncryptionFacade(encryptionServiceMock.Object);
+            var jsonData = "test data";
+            var hash = "test hash";
+            var publicKey = new EncryptionKey("publicKey", "keyType");
+            var encryptedData = new byte[] { 1, 2, 3 };
+            var encryptedHash = new byte[] { 4, 5, 6 };
+
+            _mockEncryptionService
+                .Setup(s => s.EncryptData(jsonData, hash, publicKey))
+                .Returns((encryptedData, encryptedHash));
+
+            var result = _encryptionFacade.EncryptData(jsonData, hash, publicKey);
+
+            Assert.Equal(Convert.ToBase64String(encryptedData), result.EncryptedData);
+            Assert.Equal(Convert.ToBase64String(encryptedHash), result.EncryptedHash);
+        }
+
+        [Fact]
+        public void EncryptData_NullJsonData_ThrowsArgumentNullException()
+        {
+            var hash = "test hash";
+            var publicKey = new EncryptionKey("publicKey", "keyType");
+
+            Assert.Throws<ArgumentNullException>(() => _encryptionFacade.EncryptData(null, hash, publicKey));
+        }
+
+        [Fact]
+        public void DecryptData_ValidInput_ReturnsDecryptedData()
+        {
             var encryptedData = Convert.ToBase64String(new byte[] { 1, 2, 3 });
-            var privateKey = new EncryptionKey("privateKey");
-            var expectedDecryptedData = Encoding.UTF8.GetBytes("test data");
+            var encryptedHash = Convert.ToBase64String(new byte[] { 4, 5, 6 });
+            var privateKey = new EncryptionKey("privateKey", "keyType");
+            var decryptedData = "decrypted data";
 
-            encryptionServiceMock.Setup(es => es.DecryptData(It.IsAny<EncryptedData>(), privateKey)).Returns(expectedDecryptedData);
+            _mockEncryptionService
+                .Setup(s => s.DecryptData(It.IsAny<byte[]>(), It.IsAny<byte[]>(), privateKey))
+                .Returns(decryptedData);
 
-            // Act
-            var result = encryptionFacade.DecryptData(encryptedData, privateKey);
+            var result = _encryptionFacade.DecryptData(encryptedData, encryptedHash, privateKey);
 
-            // Assert
-            Assert.Equal(expectedDecryptedData, result);
+            Assert.Equal(decryptedData, result);
         }
 
         [Fact]
-        public void EncryptData_ThrowsException_WhenNullData()
+        public void DecryptData_NullEncryptedData_ThrowsArgumentNullException()
         {
-            // Arrange
-            var encryptionServiceMock = new Mock<IEncryptionService>();
-            var encryptionFacade = new EncryptionFacade(encryptionServiceMock.Object);
-            byte[] data = null;
-            var publicKey = new EncryptionKey("publicKey");
+            var encryptedHash = Convert.ToBase64String(new byte[] { 4, 5, 6 });
+            var privateKey = new EncryptionKey("privateKey", "keyType");
 
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => encryptionFacade.EncryptData(data, publicKey));
+            Assert.Throws<ArgumentNullException>(() => _encryptionFacade.DecryptData(null, encryptedHash, privateKey));
         }
 
         [Fact]
-        public void DecryptData_ThrowsException_WhenNullEncryptedData()
+        public void DecryptData_NullEncryptedHash_ThrowsArgumentNullException()
         {
-            // Arrange
-            var encryptionServiceMock = new Mock<IEncryptionService>();
-            var encryptionFacade = new EncryptionFacade(encryptionServiceMock.Object);
-            string encryptedData = null;
-            var privateKey = new EncryptionKey("privateKey");
+            var encryptedData = Convert.ToBase64String(new byte[] { 1, 2, 3 });
+            var privateKey = new EncryptionKey("privateKey", "keyType");
 
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => encryptionFacade.DecryptData(encryptedData, privateKey));
-        }
-
-        [Fact]
-        public void DecryptData_ReturnsOriginalData_WhenDataIsNotEncrypted()
-        {
-            // Arrange
-            var encryptionServiceMock = new Mock<IEncryptionService>();
-            var encryptionFacade = new EncryptionFacade(encryptionServiceMock.Object);
-            var nonEncryptedData = "non-encrypted data";
-            var privateKey = new EncryptionKey("privateKey");
-            var expectedData = Encoding.UTF8.GetBytes(nonEncryptedData);
-
-            encryptionServiceMock.Setup(es => es.DecryptData(It.IsAny<EncryptedData>(), privateKey)).Returns(expectedData);
-
-            // Act
-            var result = encryptionFacade.DecryptData(nonEncryptedData, privateKey);
-
-            // Assert
-            Assert.Equal(expectedData, result);
+            Assert.Throws<ArgumentNullException>(() => _encryptionFacade.DecryptData(encryptedData, null, privateKey));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Application.interfaces;
+﻿using System.Text;
+using Application.interfaces;
 using Domain;
 
 namespace WebAPI;
@@ -12,17 +13,24 @@ public class EncryptionFacade
         _encryptionService = encryptionService;
     }
 
-    public string EncryptData(byte[] data, EncryptionKey publicKey)
+    public (string EncryptedData, string EncryptedHash) EncryptData(string jsonData, string hash, EncryptionKey publicKey)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
-        var encryptedData = _encryptionService.EncryptData(data, publicKey);
-        return Convert.ToBase64String(encryptedData);
+        ArgumentNullException.ThrowIfNull(jsonData);
+        var result = _encryptionService.EncryptData(jsonData, hash, publicKey);
+        var encryptedData = Convert.ToBase64String(result.EncryptedData);
+        var encryptedHash = Convert.ToBase64String(result.EncryptedHash);
+        return (encryptedData, encryptedHash);
     }
 
-    public byte[] DecryptData(string encryptedData, EncryptionKey privateKey)
+    public string DecryptData(string encryptedData, string encryptedHash, EncryptionKey privateKey)
     {
         if (encryptedData == null) throw new ArgumentNullException(nameof(encryptedData));
-        var encryptedBytes = Convert.FromBase64String(encryptedData);
-        return _encryptionService.DecryptData(new EncryptedData(encryptedBytes, true), privateKey);
+        if (encryptedHash == null) throw new ArgumentNullException(nameof(encryptedHash));
+        
+        var encryptedDataBytes = Convert.FromBase64String(encryptedData);
+        var encryptedHashBytes = Convert.FromBase64String(encryptedHash);
+        
+        var decryptedData = _encryptionService.DecryptData(encryptedDataBytes, encryptedHashBytes, privateKey);
+        return decryptedData;
     }
 }
