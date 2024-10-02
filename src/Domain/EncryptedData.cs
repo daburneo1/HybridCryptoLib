@@ -1,7 +1,13 @@
 ﻿namespace Domain;
 
-public class EncryptedData(byte[] data, bool isEncrypted)
+public class EncryptedData
 {
-    public byte[] Data { get; } = data;
-    public bool IsEncrypted { get; } = isEncrypted; // Indica si los datos están encriptados
+    public byte[] Data { get; }
+    public bool IsValid { get; }
+
+    public EncryptedData(byte[] data, bool isValid)
+    {
+        Data = data;
+        IsValid = isValid;
+    }
 }

@@ -1,28 +1,32 @@
 ﻿using System.Security.Cryptography;
 using Application.interfaces;
 using Domain;
-using System.Text;
 
-namespace Infrastructure;
-
-public class RsaEncryptionAlgorithm : IEncryptionAlgorithm
+namespace Infrastructure
 {
-    public EncryptedData Encrypt(byte[] data, EncryptionKey key)
+    public class RsaEncryptionAlgorithm : IEncryptionAlgorithm
     {
-        using (var rsa = new RSACryptoServiceProvider(2048))
+        public EncryptedData Encrypt(byte[] data, string publicKeyX509)
         {
-            rsa.FromXmlString(key.Key);
-            var encryptedData = rsa.Encrypt(data, true);
-            return new EncryptedData(encryptedData, true);
-        }
-    }
+            using (var rsa = new RSACryptoServiceProvider())
+            {
+                var publicKeyBytes = Convert.FromBase64String(publicKeyX509);
+                rsa.ImportSubjectPublicKeyInfo(publicKeyBytes, out _);
 
-    public byte[] Decrypt(EncryptedData encryptedData, EncryptionKey key)
-    {
-        using (var rsa = new RSACryptoServiceProvider(2048))
+                var encryptedData = rsa.Encrypt(data, false); // false para PKCS#1 v1.5
+                return new EncryptedData(encryptedData, true);
+            }
+        }
+
+        public byte[] Decrypt(EncryptedData encryptedData, string privateKeyPkcs8)
         {
-            rsa.FromXmlString(key.Key);
-            return rsa.Decrypt(encryptedData.Data, true);
+            using (var rsa = new RSACryptoServiceProvider())
+            {
+                var privateKeyBytes = Convert.FromBase64String(privateKeyPkcs8);
+                rsa.ImportPkcs8PrivateKey(privateKeyBytes, out _);
+
+                return rsa.Decrypt(encryptedData.Data, false); // false para PKCS#1 v1.5
+            }
         }
     }
 }

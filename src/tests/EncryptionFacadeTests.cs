@@ -24,15 +24,15 @@ namespace Tests
         {
             var jsonData = "test data";
             var hash = "test hash";
-            var publicKey = new EncryptionKey("publicKey", "keyType");
+            var publicKeyX509 = "publicKeyX509"; // Use a string for the public key
             var encryptedData = new byte[] { 1, 2, 3 };
             var encryptedHash = new byte[] { 4, 5, 6 };
 
             _mockEncryptionService
-                .Setup(s => s.EncryptData(jsonData, hash, publicKey))
+                .Setup(s => s.EncryptData(jsonData, hash, publicKeyX509))
                 .Returns((encryptedData, encryptedHash));
 
-            var result = _encryptionFacade.EncryptData(jsonData, hash, publicKey);
+            var result = _encryptionFacade.EncryptData(jsonData, hash, publicKeyX509);
 
             Assert.Equal(Convert.ToBase64String(encryptedData), result.EncryptedData);
             Assert.Equal(Convert.ToBase64String(encryptedHash), result.EncryptedHash);
@@ -42,9 +42,9 @@ namespace Tests
         public void EncryptData_NullJsonData_ThrowsArgumentNullException()
         {
             var hash = "test hash";
-            var publicKey = new EncryptionKey("publicKey", "keyType");
+            var publicKeyX509 = "publicKeyX509"; // Use a string for the public key
 
-            Assert.Throws<ArgumentNullException>(() => _encryptionFacade.EncryptData(null, hash, publicKey));
+            Assert.Throws<ArgumentNullException>(() => _encryptionFacade.EncryptData(null, hash, publicKeyX509));
         }
 
         [Fact]
@@ -52,7 +52,7 @@ namespace Tests
         {
             var encryptedData = Convert.ToBase64String(new byte[] { 1, 2, 3 });
             var encryptedHash = Convert.ToBase64String(new byte[] { 4, 5, 6 });
-            var privateKey = new EncryptionKey("privateKey", "keyType");
+            var privateKey = "privateKeyPkcs8";
             var decryptedData = "decrypted data";
 
             _mockEncryptionService
@@ -68,7 +68,7 @@ namespace Tests
         public void DecryptData_NullEncryptedData_ThrowsArgumentNullException()
         {
             var encryptedHash = Convert.ToBase64String(new byte[] { 4, 5, 6 });
-            var privateKey = new EncryptionKey("privateKey", "keyType");
+            var privateKey = "privateKeyPkcs8";
 
             Assert.Throws<ArgumentNullException>(() => _encryptionFacade.DecryptData(null, encryptedHash, privateKey));
         }
@@ -77,7 +77,7 @@ namespace Tests
         public void DecryptData_NullEncryptedHash_ThrowsArgumentNullException()
         {
             var encryptedData = Convert.ToBase64String(new byte[] { 1, 2, 3 });
-            var privateKey = new EncryptionKey("privateKey", "keyType");
+            var privateKey = "privateKeyPkcs8";
 
             Assert.Throws<ArgumentNullException>(() => _encryptionFacade.DecryptData(encryptedData, null, privateKey));
         }

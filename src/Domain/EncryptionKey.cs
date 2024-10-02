@@ -17,26 +17,37 @@ namespace Domain
         public byte[] KeyBytes => Encoding.UTF8.GetBytes(Key);
         public string Value => Key;
     }
-    
-    
+
+
     public static class RsaKeyGenerator
     {
-        public static string GenerateRsaKeyXml(string seed, bool includePrivateParameters)
+        public static string GenerateRsaPublicKeyX509(string seed)
         {
-            using (var rsa = new RSACryptoServiceProvider(2048))
-            {
-                // Derive a key from the seed
-                var seedBytes = Encoding.UTF8.GetBytes(seed);
-                var derivedBytes = new Rfc2898DeriveBytes(seedBytes, seedBytes, 100000, HashAlgorithmName.SHA256);
-                var keyBytes = derivedBytes.GetBytes(2048 / 8);
+            using var rsa = new RSACryptoServiceProvider(2048);
+            var publicKey = rsa.ExportSubjectPublicKeyInfo();
+            return Convert.ToBase64String(publicKey);
+        }
 
-                // Generate RSA key parameters
-                var rsaParameters = rsa.ExportParameters(includePrivateParameters);
-                rsaParameters.Modulus = keyBytes;
+        public static string GenerateRsaPrivateKeyPkcs8(string seed)
+        {
+            using var rsa = new RSACryptoServiceProvider(2048);
+            var privateKey = rsa.ExportPkcs8PrivateKey();
+            return Convert.ToBase64String(privateKey);
+        }
 
-                rsa.ImportParameters(rsaParameters);
-                return rsa.ToXmlString(includePrivateParameters); // Export the key in XML format
-            }
+        public static (string PublicKey, string PrivateKey) GenerateRsaKeys(string seed)
+        {
+            using var rsa = new RSACryptoServiceProvider(2048);
+
+            // Generar la clave privada en formato PKCS#8
+            var privateKey = rsa.ExportPkcs8PrivateKey();
+            var privateKeyString = Convert.ToBase64String(privateKey);
+
+            // Generar la clave pública en formato X.509
+            var publicKey = rsa.ExportSubjectPublicKeyInfo();
+            var publicKeyString = Convert.ToBase64String(publicKey);
+
+            return (publicKeyString, privateKeyString);
         }
     }
 }

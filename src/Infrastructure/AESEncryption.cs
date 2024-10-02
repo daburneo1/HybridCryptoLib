@@ -7,32 +7,29 @@ namespace Infrastructure;
 
 public class AesEncryption : IEncryptionAlgorithm
 {
-    public EncryptedData Encrypt(byte[] data, EncryptionKey key)
+    public EncryptedData Encrypt(byte[] data, string key)
     {
-        using (var sha512 = SHA512.Create())
+        var keyBytes = SHA512.HashData(Encoding.UTF8.GetBytes(key));
+        using (var aes = Aes.Create())
         {
-            var keyBytes = sha512.ComputeHash(Encoding.UTF8.GetBytes(key.Key));
-            using (var aes = Aes.Create())
+            aes.Key = keyBytes.Take(32).ToArray(); // Use the first 32 bytes of the SHA-512 hash
+            aes.GenerateIV();
+            using (var encryptor = aes.CreateEncryptor(aes.Key, aes.IV))
             {
-                aes.Key = keyBytes.Take(32).ToArray(); // Use the first 32 bytes of the SHA-512 hash
-                aes.GenerateIV();
-                using (var encryptor = aes.CreateEncryptor(aes.Key, aes.IV))
-                {
-                    var encryptedData = PerformCryptography(data, encryptor);
-                    var result = new byte[aes.IV.Length + encryptedData.Length];
-                    Buffer.BlockCopy(aes.IV, 0, result, 0, aes.IV.Length);
-                    Buffer.BlockCopy(encryptedData, 0, result, aes.IV.Length, encryptedData.Length);
-                    return new EncryptedData(result, true);
-                }
+                var encryptedData = PerformCryptography(data, encryptor);
+                var result = new byte[aes.IV.Length + encryptedData.Length];
+                Buffer.BlockCopy(aes.IV, 0, result, 0, aes.IV.Length);
+                Buffer.BlockCopy(encryptedData, 0, result, aes.IV.Length, encryptedData.Length);
+                return new EncryptedData(result, true);
             }
         }
     }
 
-    public byte[] Decrypt(EncryptedData encryptedData, EncryptionKey key)
+    public byte[] Decrypt(EncryptedData encryptedData, string key)
     {
         using (var sha512 = SHA512.Create())
         {
-            var keyBytes = sha512.ComputeHash(Encoding.UTF8.GetBytes(key.Key));
+            var keyBytes = sha512.ComputeHash(Encoding.UTF8.GetBytes(key));
             using (var aes = Aes.Create())
             {
                 aes.Key = keyBytes.Take(32).ToArray(); // Use the first 32 bytes of the SHA-512 hash

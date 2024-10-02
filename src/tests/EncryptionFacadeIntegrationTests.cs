@@ -1,58 +1,124 @@
-﻿using Application.interfaces;
+﻿using System.Security.Cryptography;
+using System.Text;
+using Application.interfaces;
 using Application.services;
 using Domain;
 using WebAPI;
 using Xunit;
 using Infrastructure;
 
-namespace Tests;
-
-public class EncryptionFacadeIntegrationTests
+namespace Tests
 {
-    private readonly IEncryptionService _encryptionService;
-    private readonly EncryptionFacade _encryptionFacade;
-
-    public EncryptionFacadeIntegrationTests()
+    public class EncryptionFacadeIntegrationTests
     {
-        // Configure the actual implementations of the encryption algorithms
-        IEncryptionAlgorithm aesAlgorithm = new AesEncryption();
-        IEncryptionAlgorithm rsaAlgorithm = new RsaEncryptionAlgorithm();
+        private readonly IEncryptionService _encryptionService;
+        private readonly EncryptionFacade _encryptionFacade;
 
-        // Use these implementations in HybridEncryptionService
-        _encryptionService = new HybridEncryptionService(aesAlgorithm, rsaAlgorithm);
-        _encryptionFacade = new EncryptionFacade(_encryptionService);
-    }
+        public EncryptionFacadeIntegrationTests()
+        {
+            // Configure the actual implementations of the encryption algorithms
+            IEncryptionAlgorithm aesAlgorithm = new AesEncryption();
+            IEncryptionAlgorithm rsaAlgorithm = new RsaEncryptionAlgorithm();
 
-    [Fact]
-    public void EncryptData_ValidInput_ReturnsEncryptedDataAndHash()
-    {
-        var jsonData = "Hello World!!!";
-        var hash = "HashTest";
-        var seed = "publicKeySeed";
-        var publicKeyXml = RsaKeyGenerator.GenerateRsaKeyXml(seed, false); // Generate public key
-        var publicKey = new EncryptionKey(publicKeyXml, "RSA");
+            // Use these implementations in HybridEncryptionService
+            _encryptionService = new HybridEncryptionService(aesAlgorithm, rsaAlgorithm);
+            _encryptionFacade = new EncryptionFacade(_encryptionService);
+        }
 
-        var result = _encryptionFacade.EncryptData(jsonData, hash, publicKey);
+        [Fact]
+        public void EncryptData_ValidInput_ReturnsEncryptedDataAndHash()
+        {
+            var jsonData = "Hello World!!!";
+            var hash = "HashTest";
+            var seed = "publicKeySeed";
+            var publicKeyX509 = RsaKeyGenerator.GenerateRsaPublicKeyX509(seed); // Generate public key in X.509 format
 
-        Assert.NotNull(result.EncryptedData);
-        Assert.NotNull(result.EncryptedHash);
-    }
+            var result = _encryptionFacade.EncryptData(jsonData, hash, publicKeyX509);
 
-    [Fact]
-    public void DecryptData_ValidInput_ReturnsDecryptedData()
-    {
-        var jsonData = "Hello World!!!";
-        var hash = "HashTest";
-        var publicKeySeed = "publicKeySeed";
-        var privateKeySeed = "privateKeySeed";
-        var publicKeyXml = RsaKeyGenerator.GenerateRsaKeyXml(publicKeySeed, false); // Generate public key
-        var privateKeyXml = RsaKeyGenerator.GenerateRsaKeyXml(privateKeySeed, true); // Generate private key
-        var publicKey = new EncryptionKey(publicKeyXml, "RSA");
-        var privateKey = new EncryptionKey(privateKeyXml, "RSA");
+            Assert.NotNull(result.EncryptedData);
+            Assert.NotNull(result.EncryptedHash);
+        }
 
-        var encryptedResult = _encryptionFacade.EncryptData(jsonData, hash, publicKey);
-        var decryptedData = _encryptionFacade.DecryptData(encryptedResult.EncryptedData, encryptedResult.EncryptedHash, privateKey);
+        [Fact]
+        public void DecryptData_ValidInput_ReturnsDecryptedData()
+        {
+            var jsonData = "Hello World!!!";
+            var hash = "HashTest";
+            
+            var (publicKey, privateKey) = RsaKeyGenerator.GenerateRsaKeys("RsaTestKey");
 
-        Assert.Equal(jsonData, decryptedData);
+            var encryptedResult = _encryptionFacade.EncryptData(jsonData, hash, publicKey);
+            var decryptedData = _encryptionFacade.DecryptData(encryptedResult.EncryptedData, encryptedResult.EncryptedHash, privateKey);
+
+            Assert.Equal(jsonData, decryptedData);
+        }
+
+        [Fact]
+        public void AesEncryptData_ValidInput_ReturnsEncryptedData()
+        {
+            var plainText = "Hello World!!!";
+            var key = "AesTestKey";
+
+            var dataBytes = Encoding.UTF8.GetBytes(plainText);
+            var aesAlgorithm = new AesEncryption();
+            var encryptedData = aesAlgorithm.Encrypt(dataBytes, key);
+
+            Assert.NotNull(encryptedData);
+            Assert.NotEmpty(encryptedData.Data);
+        }
+
+        [Fact]
+        public void AesDecryptData_ValidInput_ReturnsDecryptedData()
+        {
+            var plainText = "Hello World!!!";
+            var key = "AesTestKey";
+
+            var dataBytes = Encoding.UTF8.GetBytes(plainText);
+            var aesAlgorithm = new AesEncryption();
+            var encryptedData = aesAlgorithm.Encrypt(dataBytes, key);
+            var decryptedData = aesAlgorithm.Decrypt(encryptedData, key);
+
+            var decryptedText = Encoding.UTF8.GetString(decryptedData);
+            Assert.Equal(plainText, decryptedText);
+        }
+
+        [Fact]
+        public void RsaEncryptData_ValidInput_ReturnsEncryptedData()
+        {
+            var plainText = "Hello World!!!";
+            var publicKey = RsaKeyGenerator.GenerateRsaPublicKeyX509("RsaTestKey");
+
+            var dataBytes = Encoding.UTF8.GetBytes(plainText);
+            var rsaAlgorithm = new RsaEncryptionAlgorithm();
+            
+            var encryptedData = rsaAlgorithm.Encrypt(dataBytes, publicKey);
+
+            Assert.NotNull(encryptedData);
+            Assert.NotEmpty(encryptedData.Data);
+            var encryptedDataString = Convert.ToBase64String(encryptedData.Data);
+            Assert.NotEmpty(encryptedDataString);
+        }
+
+        [Fact]
+        public void RsaDecryptData_ValidInput_ReturnsDecryptedData()
+        {
+            var plainText = "Hello World!!!";
+            var (publicKey, privateKey) = RsaKeyGenerator.GenerateRsaKeys("RsaTestKey");
+
+            var dataBytes = Encoding.UTF8.GetBytes(plainText);
+            var rsaAlgorithm = new RsaEncryptionAlgorithm();
+
+            var encryptedData = rsaAlgorithm.Encrypt(dataBytes, publicKey);
+    
+            // Asegúrate de que los datos cifrados no sean nulos o vacíos
+            Assert.NotNull(encryptedData);
+            Assert.True(encryptedData.IsValid);
+            Assert.NotEmpty(encryptedData.Data);
+
+            var decryptedData = rsaAlgorithm.Decrypt(encryptedData, privateKey);
+            var decryptedText = Encoding.UTF8.GetString(decryptedData);
+    
+            Assert.Equal(plainText, decryptedText);
+        }
     }
 }
