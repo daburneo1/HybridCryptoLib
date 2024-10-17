@@ -8,7 +8,7 @@ namespace Infrastructure
     {
         public EncryptedData Encrypt(byte[] data, string publicKeyX509)
         {
-            using (var rsa = new RSACryptoServiceProvider())
+            using (var rsa = new RSACryptoServiceProvider(1024))
             {
                 var publicKeyBytes = Convert.FromBase64String(publicKeyX509);
                 rsa.ImportSubjectPublicKeyInfo(publicKeyBytes, out _);
@@ -20,7 +20,7 @@ namespace Infrastructure
 
         public byte[] Decrypt(EncryptedData encryptedData, string privateKeyPkcs8)
         {
-            using (var rsa = new RSACryptoServiceProvider())
+            using (var rsa = new RSACryptoServiceProvider(1024))
             {
                 var privateKeyBytes = Convert.FromBase64String(privateKeyPkcs8);
                 rsa.ImportPkcs8PrivateKey(privateKeyBytes, out _);
