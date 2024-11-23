@@ -5,7 +5,7 @@ using Domain;
 
 namespace Infrastructure;
 
-public class AesEncryption : IEncryptionAlgorithm
+public class AESEncryptionAlgorithm : IEncryptionAlgorithm
 {
     public EncryptedData Encrypt(byte[] data, string key)
     {

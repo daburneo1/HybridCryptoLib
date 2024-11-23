@@ -16,7 +16,7 @@ namespace Tests
         public EncryptionFacadeIntegrationTests()
         {
             // Configure the actual implementations of the encryption algorithms
-            IEncryptionAlgorithm aesAlgorithm = new AesEncryption();
+            IEncryptionAlgorithm aesAlgorithm = new AESEncryptionAlgorithm();
             IEncryptionAlgorithm rsaAlgorithm = new RsaEncryptionAlgorithm();
 
             // Use these implementations in HybridEncryptionService
@@ -61,7 +61,7 @@ namespace Tests
             var key = "AesTestKey";
 
             var dataBytes = Encoding.UTF8.GetBytes(plainText);
-            var aesAlgorithm = new AesEncryption();
+            var aesAlgorithm = new AESEncryptionAlgorithm();
             var encryptedData = aesAlgorithm.Encrypt(dataBytes, key);
 
             Assert.NotNull(encryptedData);
@@ -75,7 +75,7 @@ namespace Tests
             var key = "AesTestKey";
 
             var dataBytes = Encoding.UTF8.GetBytes(plainText);
-            var aesAlgorithm = new AesEncryption();
+            var aesAlgorithm = new AESEncryptionAlgorithm();
             var encryptedData = aesAlgorithm.Encrypt(dataBytes, key);
             var decryptedData = aesAlgorithm.Decrypt(encryptedData, key);
 

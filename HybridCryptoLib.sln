@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "src\WebAPI\WebAPI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "src\tests\tests.csproj", "{307AB522-EEBF-47D8-8219-DF585FC52A0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCryptoLib", "HybridCryptoLib\HybridCryptoLib.csproj", "{D0284696-3F9D-47B5-BF94-E691FB13360E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{307AB522-EEBF-47D8-8219-DF585FC52A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{307AB522-EEBF-47D8-8219-DF585FC52A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{307AB522-EEBF-47D8-8219-DF585FC52A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0284696-3F9D-47B5-BF94-E691FB13360E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0284696-3F9D-47B5-BF94-E691FB13360E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0284696-3F9D-47B5-BF94-E691FB13360E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0284696-3F9D-47B5-BF94-E691FB13360E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C885C5AC-3334-4D44-8186-B4B2DD930876} = {46834DC6-9D1D-4393-A7DA-ECCA14C2D140}
