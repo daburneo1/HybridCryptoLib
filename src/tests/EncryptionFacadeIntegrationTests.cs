@@ -1,8 +1,7 @@
-﻿using System.Security.Cryptography;
-using System.Text;
+﻿using System.Text;
 using Application.interfaces;
 using Application.services;
-using Domain;
+using Application.Utilities;
 using WebAPI;
 using Xunit;
 using Infrastructure;
@@ -30,10 +29,10 @@ namespace Tests
         {
             var jsonData = "Hello World!!!";
             var hash = "HashTest";
-            var seed = "publicKeySeed";
-            var publicKeyX509 = RsaKeyGenerator.GenerateRsaPublicKeyX509(seed); // Generate public key in X.509 format
+            var publicKeyPath = "C:\\Users\\davb9\\.ssh\\id_rsa_pub.pem";
+            var publicKey = RsaKeyReader.ReadPublicKey(publicKeyPath);
 
-            var result = _encryptionFacade.EncryptData(jsonData, hash, publicKeyX509);
+            var result = _encryptionFacade.EncryptData(jsonData, hash, publicKey);
 
             Assert.NotNull(result.EncryptedData);
             Assert.NotNull(result.EncryptedHash);
@@ -44,8 +43,10 @@ namespace Tests
         {
             var jsonData = "Hello World!!!";
             var hash = "HashTest";
-            
-            var (publicKey, privateKey) = RsaKeyGenerator.GenerateRsaKeys("RsaTestKey");
+            var publicKeyPath = "C:\\Users\\davb9\\.ssh\\id_rsa_pub.pem";
+            var privateKeyPath = "C:\\Users\\davb9\\.ssh\\id_rsa_pkcs8.pem";
+            var publicKey = RsaKeyReader.ReadPublicKey(publicKeyPath);
+            var privateKey = RsaKeyReader.ReadPrivateKey(privateKeyPath);
 
             var encryptedResult = _encryptionFacade.EncryptData(jsonData, hash, publicKey);
             var decryptedData = _encryptionFacade.DecryptData(encryptedResult.EncryptedData, encryptedResult.EncryptedHash, privateKey);
@@ -86,7 +87,8 @@ namespace Tests
         public void RsaEncryptData_ValidInput_ReturnsEncryptedData()
         {
             var plainText = "Hello World!!!";
-            var publicKey = RsaKeyGenerator.GenerateRsaPublicKeyX509("RsaTestKey");
+            var publicKeyPath = "C:\\Users\\davb9\\.ssh\\id_rsa_pub.pem";
+            var publicKey = RsaKeyReader.ReadPublicKey(publicKeyPath);
 
             var dataBytes = Encoding.UTF8.GetBytes(plainText);
             var rsaAlgorithm = new RsaEncryptionAlgorithm();
@@ -103,7 +105,11 @@ namespace Tests
         public void RsaDecryptData_ValidInput_ReturnsDecryptedData()
         {
             var plainText = "Hello World!!!";
-            var (publicKey, privateKey) = RsaKeyGenerator.GenerateRsaKeys("RsaTestKey");
+            
+            var publicKeyPath = "C:\\Users\\davb9\\.ssh\\id_rsa_pub.pem";
+            var privateKeyPath = "C:\\Users\\davb9\\.ssh\\id_rsa_pkcs8.pem";
+            var publicKey = RsaKeyReader.ReadPublicKey(publicKeyPath);
+            var privateKey = RsaKeyReader.ReadPrivateKey(privateKeyPath);
 
             var dataBytes = Encoding.UTF8.GetBytes(plainText);
             var rsaAlgorithm = new RsaEncryptionAlgorithm();
