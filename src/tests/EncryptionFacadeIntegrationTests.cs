@@ -2,9 +2,9 @@
 using Application.interfaces;
 using Application.services;
 using Application.Utilities;
+using Infrastructure;
 using WebAPI;
 using Xunit;
-using Infrastructure;
 
 namespace Tests
 {

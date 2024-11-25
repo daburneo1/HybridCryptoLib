@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using Application.interfaces;
+using Domain;
 
 namespace WebAPI
 {

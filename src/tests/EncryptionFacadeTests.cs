@@ -4,7 +4,6 @@ namespace Tests
     using Xunit;
     using Moq;
     using Application.interfaces;
-    using Domain;
     using WebAPI;
     using System;
 
