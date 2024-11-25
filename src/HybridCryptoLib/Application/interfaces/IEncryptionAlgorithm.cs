@@ -1,6 +1,6 @@
-﻿using Domain;
+﻿using HybridCryptoLib.Domain;
 
-namespace Application.interfaces;
+namespace HybridCryptoLib.Application.interfaces;
 
 public interface IEncryptionAlgorithm
 {

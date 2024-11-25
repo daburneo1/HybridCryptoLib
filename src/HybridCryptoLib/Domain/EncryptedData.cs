@@ -1,13 +1,7 @@
-﻿namespace Domain;
+﻿namespace HybridCryptoLib.Domain;
 
-public class EncryptedData
+public class EncryptedData(byte[] data, bool isValid)
 {
-    public byte[] Data { get; }
-    public bool IsValid { get; }
-
-    public EncryptedData(byte[] data, bool isValid)
-    {
-        Data = data;
-        IsValid = isValid;
-    }
+    public byte[] Data { get; } = data;
+    public bool IsValid { get; } = isValid;
 }

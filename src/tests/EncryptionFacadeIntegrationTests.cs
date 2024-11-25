@@ -1,9 +1,9 @@
 ﻿using System.Text;
-using Application.interfaces;
-using Application.services;
-using Application.Utilities;
-using Infrastructure;
-using WebAPI;
+using HybridCryptoLib;
+using HybridCryptoLib.Application.interfaces;
+using HybridCryptoLib.Application.services;
+using HybridCryptoLib.Application.Utilities;
+using HybridCryptoLib.Infrastructure.Algorithm;
 using Xunit;
 
 namespace Tests
@@ -16,7 +16,7 @@ namespace Tests
         public EncryptionFacadeIntegrationTests()
         {
             // Configure the actual implementations of the encryption algorithms
-            IEncryptionAlgorithm aesAlgorithm = new AESEncryptionAlgorithm();
+            IEncryptionAlgorithm aesAlgorithm = new AesEncryptionAlgorithm();
             IEncryptionAlgorithm rsaAlgorithm = new RsaEncryptionAlgorithm();
 
             // Use these implementations in HybridEncryptionService
@@ -61,7 +61,7 @@ namespace Tests
             var key = "AesTestKey";
 
             var dataBytes = Encoding.UTF8.GetBytes(plainText);
-            var aesAlgorithm = new AESEncryptionAlgorithm();
+            var aesAlgorithm = new AesEncryptionAlgorithm();
             var encryptedData = aesAlgorithm.Encrypt(dataBytes, key);
 
             Assert.NotNull(encryptedData);
@@ -75,7 +75,7 @@ namespace Tests
             var key = "AesTestKey";
 
             var dataBytes = Encoding.UTF8.GetBytes(plainText);
-            var aesAlgorithm = new AESEncryptionAlgorithm();
+            var aesAlgorithm = new AesEncryptionAlgorithm();
             var encryptedData = aesAlgorithm.Encrypt(dataBytes, key);
             var decryptedData = aesAlgorithm.Decrypt(encryptedData, key);
 

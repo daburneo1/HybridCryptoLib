@@ -30,7 +30,7 @@
     &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeIntegrationTests.EncryptData_ValidInput_ReturnsEncryptedDataAndHash&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=17c00860_002Dc696_002D4e20_002D8b0f_002D055b784f9a64/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=17c00860_002Dc696_002D4e20_002D8b0f_002D055b784f9a64/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
@@ -40,10 +40,11 @@
     &lt;ProjectFile&gt;307AB522-EEBF-47D8-8219-DF585FC52A0F/f:EncryptionFacadeIntegrationTests.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3c96009c_002D57c2_002D4b02_002Dace2_002D8b97ea461925/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeIntegrationTests.DecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3c96009c_002D57c2_002D4b02_002Dace2_002D8b97ea461925/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DecryptData_ValidInput_ReturnsDecryptedData" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;307AB522-EEBF-47D8-8219-DF585FC52A0F/f:EncryptionFacadeIntegrationTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;307AB522-EEBF-47D8-8219-DF585FC52A0F/f:EncryptionFacadeTests.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4f1e65b2_002D61c9_002D4c15_002D9fcb_002Da4048fa451ed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EncryptionFacadeTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;

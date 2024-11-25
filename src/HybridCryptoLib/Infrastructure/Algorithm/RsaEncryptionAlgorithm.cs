@@ -1,9 +1,8 @@
 ﻿using System.Security.Cryptography;
-using System.Text.RegularExpressions;
-using Application.interfaces;
-using Domain;
+using HybridCryptoLib.Application.interfaces;
+using HybridCryptoLib.Domain;
 
-namespace Infrastructure
+namespace HybridCryptoLib.Infrastructure.Algorithm
 {
     public class RsaEncryptionAlgorithm : IEncryptionAlgorithm
     {

@@ -1,4 +1,4 @@
-﻿namespace Application.Utilities;
+﻿namespace HybridCryptoLib.Application.Utilities;
 
 public class RsaKeyReader
 {

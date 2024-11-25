@@ -1,10 +1,11 @@
 ﻿
+using HybridCryptoLib;
+using HybridCryptoLib.Application.interfaces;
+
 namespace Tests
 {
     using Xunit;
     using Moq;
-    using Application.interfaces;
-    using WebAPI;
     using System;
 
     public class EncryptionFacadeTests

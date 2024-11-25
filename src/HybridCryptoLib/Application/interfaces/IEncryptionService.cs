@@ -1,6 +1,4 @@
-﻿using Domain;
-
-namespace Application.interfaces
+﻿namespace HybridCryptoLib.Application.interfaces
 {
     public interface IEncryptionService
     {

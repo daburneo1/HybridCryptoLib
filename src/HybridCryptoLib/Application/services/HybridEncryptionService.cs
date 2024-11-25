@@ -1,21 +1,12 @@
-﻿using System.Security.Cryptography;
-using System.Text;
-using Application.interfaces;
-using Domain;
+﻿using System.Text;
+using HybridCryptoLib.Application.interfaces;
+using HybridCryptoLib.Domain;
 
-namespace Application.services
+namespace HybridCryptoLib.Application.services
 {
-    public class HybridEncryptionService : IEncryptionService
+    public class HybridEncryptionService(IEncryptionAlgorithm aesAlgorithm, IEncryptionAlgorithm rsaAlgorithm)
+        : IEncryptionService
     {
-        private readonly IEncryptionAlgorithm aesAlgorithm;
-        private readonly IEncryptionAlgorithm rsaAlgorithm;
-
-        public HybridEncryptionService(IEncryptionAlgorithm aesAlgorithm, IEncryptionAlgorithm rsaAlgorithm)
-        {
-            this.aesAlgorithm = aesAlgorithm;
-            this.rsaAlgorithm = rsaAlgorithm;
-        }
-
         public (byte[] EncryptedData, byte[] EncryptedHash) EncryptData(string plainText, string hashKey, string publicKeyX509)
         {
             // Encrypt plain text with AES

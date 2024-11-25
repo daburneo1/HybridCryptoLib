@@ -1,18 +1,12 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Domain
+namespace HybridCryptoLib.Domain
 {
-    public class EncryptionKey
+    public class EncryptionKey(string key, string pem)
     {
-        public string Key { get; }
-        public string Pem { get; }
-
-        public EncryptionKey(string key, string pem)
-        {
-            Key = key;
-            Pem = pem;
-        }
+        public string Key { get; } = key;
+        public string Pem { get; } = pem;
 
         public byte[] KeyBytes => Encoding.UTF8.GetBytes(Key);
         public string Value => Key;

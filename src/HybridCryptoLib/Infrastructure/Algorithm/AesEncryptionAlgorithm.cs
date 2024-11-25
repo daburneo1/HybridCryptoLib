@@ -1,11 +1,11 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
-using Application.interfaces;
-using Domain;
+using HybridCryptoLib.Application.interfaces;
+using HybridCryptoLib.Domain;
 
-namespace Infrastructure;
+namespace HybridCryptoLib.Infrastructure.Algorithm;
 
-public class AESEncryptionAlgorithm : IEncryptionAlgorithm
+public class AesEncryptionAlgorithm : IEncryptionAlgorithm
 {
     public EncryptedData Encrypt(byte[] data, string key)
     {
