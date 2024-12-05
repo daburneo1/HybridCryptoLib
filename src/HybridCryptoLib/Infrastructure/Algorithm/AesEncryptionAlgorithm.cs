@@ -21,24 +21,44 @@ public class AesEncryptionAlgorithm : IEncryptionAlgorithm
                 var result = new byte[aes.IV.Length + encryptedData.Length];
                 Buffer.BlockCopy(aes.IV, 0, result, 0, aes.IV.Length);
                 Buffer.BlockCopy(encryptedData, 0, result, aes.IV.Length, encryptedData.Length);
-                return new EncryptedData(result, true);
+                return new EncryptedData(Convert.ToBase64String(result), true);
             }
         }
     }
 
     public byte[] Decrypt(EncryptedData encryptedData, string key)
     {
-        var keyBytes = SHA512.HashData(Encoding.UTF8.GetBytes(key));
+        var parts = encryptedData.Data.Split(';');
+        if (parts.Length != 2)
+        {
+            throw new FormatException("Invalid encrypted data format. Expected IV and cipher text separated by ':'.");
+        }
+
+        // Decodifica IV y datos cifrados desde Base64
+        var iv = Convert.FromBase64String(parts[0]);
+        var cipherText = Convert.FromBase64String(parts[1]);
+
+        // Verifica tamaños
+        if (iv.Length != 16)
+        {
+            throw new CryptographicException("Invalid IV length. Expected 16 bytes.");
+        }
+
+        // Decodifica la clave AES
+        var keyBytes = Encoding.UTF8.GetBytes(key);
+        if (keyBytes.Length != 16 && keyBytes.Length != 24 && keyBytes.Length != 32)
+        {
+            throw new CryptographicException("Invalid AES key length.");
+        }
+
+        // Configura AES
         using (var aes = Aes.Create())
         {
-            aes.Key = keyBytes.Take(32).ToArray(); // Use the first 32 bytes of the SHA-512 hash
-            aes.Padding = PaddingMode.PKCS7; // Ensure consistent padding mode
-            var iv = new byte[aes.BlockSize / 8];
-            var cipherText = new byte[encryptedData.Data.Length - iv.Length];
-            Buffer.BlockCopy(encryptedData.Data, 0, iv, 0, iv.Length);
-            Buffer.BlockCopy(encryptedData.Data, iv.Length, cipherText, 0, cipherText.Length);
+            aes.Key = keyBytes;
             aes.IV = iv;
-            using (var decryptor = aes.CreateDecryptor(aes.Key, aes.IV))
+            aes.Padding = PaddingMode.PKCS7; // Debe coincidir con el cliente
+
+            using (var decryptor = aes.CreateDecryptor())
             {
                 return PerformCryptography(cipherText, decryptor);
             }
@@ -52,7 +72,7 @@ public class AesEncryptionAlgorithm : IEncryptionAlgorithm
             using (var cryptoStream = new CryptoStream(memoryStream, cryptoTransform, CryptoStreamMode.Write))
             {
                 cryptoStream.Write(data, 0, data.Length);
-                cryptoStream.FlushFinalBlock(); 
+                cryptoStream.FlushFinalBlock();
             }
             return memoryStream.ToArray();
         }

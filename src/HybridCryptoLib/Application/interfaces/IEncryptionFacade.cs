@@ -1,8 +1,8 @@
 ﻿namespace HybridCryptoLib.Application.interfaces
 {
-    public interface IEncryptionService
+    public interface IEncryptionFacade
     {
-        (byte[] EncryptedData, byte[] EncryptedHash) EncryptData(string plainText, string hash, string publicKey);
+        (string EncryptedData, string EncryptedHash) EncryptData(string jsonData, string hash, string publicKeyX509);
         string DecryptData(string encryptedData, string encryptedHash, string privateKey);
     }
 }

@@ -15,14 +15,14 @@ namespace HybridCryptoLib.Application.services
 
             // Hash the plain text with SHA256
             var hashBytes = Encoding.UTF8.GetBytes(hashKey);
-                
+
             // Encrypt the hash with RSA
             var rsaEncryptedHash = rsaAlgorithm.Encrypt(hashBytes, publicKeyX509);
 
-            return (aesEncryptedData.Data, rsaEncryptedHash.Data);
+            return (Convert.FromBase64String(aesEncryptedData.Data), Convert.FromBase64String(rsaEncryptedHash.Data));
         }
 
-        public string DecryptData(byte[] encryptedData, byte[] encryptedHash, string privateKey)
+        public string DecryptData(string encryptedData, string encryptedHash, string privateKey)
         {
             // Decrypt the hash with RSA
             var decryptedHash = rsaAlgorithm.Decrypt(new EncryptedData(encryptedHash, true), privateKey);

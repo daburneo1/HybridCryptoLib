@@ -8,23 +8,33 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ACapiHelper_002EWindows_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fe5aee959788ce687549bb29510b4d7f5ad2ee3a4131fb9a3ef4eb26441b6ddee_003FCapiHelper_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ACastleProxyFactory_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fa54edce4e91cb965fe389033e2b24044e512ee99e302e41c8c2909733443b14_003FCastleProxyFactory_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AConvert_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F106927d79dae58d552cf02cc6259937374ebd8103ac66086c62595612c9a6a_003FConvert_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AConvert_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F5ed31abcb28174b321885e46ba3a003a882030a6f66e30121f9f4e582f4cfd_003FConvert_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ACspParameters_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fbb7a32aac2c52865c56a50eedc20c8aa8734acb98724864d548cea5eb186c6_003FCspParameters_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExceptionDispatchInfo_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fbd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182_003FExceptionDispatchInfo_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExceptionDispatchInfo_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fbd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182_003FExceptionDispatchInfo_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AFile_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fb2e2ff5e4f118b6e4ad5f910e9fde1fd6a338b5716cff790e934a2014dc8379_003FFile_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AIOException_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F23c728fc44db7fb9ceecaa21c293ddc28df38d0c317c3115e7b284d942fe842_003FIOException_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMethodBaseInvoker_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fd882146b4f265f10bcbec2663fce248db9ffec5fa1aeaf76e32a11ba5eafcd6_003FMethodBaseInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMethodBaseInvoker_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F69ba5438e03a0e3a5d2f133f37405f9e32f9e0abb1fbe0a8cb7145514ff85f_003FMethodBaseInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AObject_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F9a6b1457cbcf17db31a383ba49ef9bcc786cf3ef77146d997eee499b27a46d_003FObject_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003APrivateKeyInfoAsn_002Exml_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F8443f7f4b4c28619f8bc6a322e45abf1451ef8a13a3f41ded4d3cf10b52ae93f_003FPrivateKeyInfoAsn_002Exml_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ARSACryptoServiceProvider_002EWindows_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F97b93ec2266d1bcda17c56aebdb90dce9d4d852d99d8ac1eb30bce450212a20_003FRSACryptoServiceProvider_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ARSACryptoServiceProvider_002EWindows_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F9ebfcd0843f115a7863826dffc75edc2f36b485ef2415686ffedb317a7cf0e1_003FRSACryptoServiceProvider_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ARSAPublicKeyAsn_002Exml_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F54907fbfbbd3a8d7658c351248bd6568176e93764cb6919d1c9f389aed2fcf6_003FRSAPublicKeyAsn_002Exml_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ARSA_002EXml_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fb266fe2414ee221ed079ac3f484e9e9b24a6e6ed62848349c64ba3e2b7e7f2_003FRSA_002EXml_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASafeFileHandle_002EWindows_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F261ea83c988816e3d8fe76b15b7ac6c10af64b8f9e739854f83c137c8ba9_003FSafeFileHandle_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASubjectPublicKeyInfoAsn_002Exml_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fedfa3b71f045b6731e6284bc33221df1d6c79f817ba252cec52fd7653122_003FSubjectPublicKeyInfoAsn_002Exml_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASubjectPublicKeyInfoFactory_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F99ebf4e4edf2417da8c72c52b152f7dc27d000_003F6d_003F59300a8c_003FSubjectPublicKeyInfoFactory_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASymmetricAlgorithm_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fe84cd252abbd67a7bad1f25e4bdcf1f5487f724dd9aa8ec102160f70cabe_003FSymmetricAlgorithm_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASymmetricAlgorithm_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fe84cd252abbd67a7bad1f25e4bdcf1f5487f724dd9aa8ec102160f70cabe_003FSymmetricAlgorithm_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATestInvoker_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fce7aac7c8eef8118596b4ecf51a89219c1850a88d1d3d4ac5d4949c4c7f4a87_003FTestInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AXmlKeyHelper_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F53f0914aecd39bfb31963c31d7396f88186d79e7ababf7684b18623d7ac9c2_003FXmlKeyHelper_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\davb9\AppData\Local\JetBrains\Rider2024.2\resharper-host\temp\Rider\vAny\CoverageData\_HybridCryptoLib.-1226334941\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=05ace751_002De176_002D4105_002D93cb_002De6963df60da1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.DecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f647b1d_002Dede5_002D4b59_002D9597_002D0735b8a44051/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EncryptData_ValidInput_ReturnsEncryptedDataAndHash #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeIntegrationTests.EncryptData_ValidInput_ReturnsEncryptedDataAndHash&lt;/TestId&gt;&#xD;
@@ -40,11 +50,21 @@
     &lt;ProjectFile&gt;307AB522-EEBF-47D8-8219-DF585FC52A0F/f:EncryptionFacadeIntegrationTests.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3c96009c_002D57c2_002D4b02_002Dace2_002D8b97ea461925/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DecryptData_ValidInput_ReturnsDecryptedData" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3c96009c_002D57c2_002D4b02_002Dace2_002D8b97ea461925/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;ProjectFile&gt;307AB522-EEBF-47D8-8219-DF585FC52A0F/f:EncryptionFacadeIntegrationTests.cs&lt;/ProjectFile&gt;&#xD;
     &lt;ProjectFile&gt;307AB522-EEBF-47D8-8219-DF585FC52A0F/f:EncryptionFacadeTests.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=46ad37a7_002D835a_002D48b8_002Db9e2_002D765acf516425/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.DecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4e75e3fe_002D1d08_002D4d25_002Dbc8d_002Dfd381bbf98b7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.DecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4f1e65b2_002D61c9_002D4c15_002D9fcb_002Da4048fa451ed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EncryptionFacadeTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
@@ -61,10 +81,102 @@
     &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeIntegrationTests.EncryptData_ValidInput_ReturnsEncryptedDataAndHash&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=577c0ad0_002D8d01_002D4e59_002Dbacf_002Dd6859c019718/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.DecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5f368390_002D2943_002D4542_002D918d_002D3a6f3160b394/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=68a9fc63_002D50f4_002D4a8c_002Db4d7_002D9f6a6d0d17a3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=721d9fb0_002Dcf03_002D45ef_002Da52a_002D50bb9017a88d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #9" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=796307a2_002D71b8_002D43d7_002D8beb_002D674ef58f7bc8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #12" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7b99b6bc_002D1945_002D4476_002Db0a9_002D584c21058052/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData #8" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.DecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=80e66779_002D3e9b_002D4fcd_002Da8df_002D469ada1fb9eb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=901a4f3e_002D81fb_002D41b4_002D864f_002Dcb375efdbb05/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=93afb5c6_002D749b_002D463b_002D8830_002D54ad4bbaac55/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #11" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9cbaf924_002D87a1_002D48b6_002Da320_002D0cc5f2e91766/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EncryptData_ValidInput_ReturnsEncryptedDataAndHash #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeIntegrationTests.EncryptData_ValidInput_ReturnsEncryptedDataAndHash&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a600e03f_002D91ce_002D452c_002Db542_002D98467b2846dc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.DecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.RsaEncryptData_ValidInput_ReturnsEncryptedData&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.RsaDecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b1fbbff8_002D98b6_002D4c81_002D86b7_002D1819aba173ff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bdc6ea72_002D07fd_002D409b_002Da164_002De471574e2054/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DecryptData_ValidInput_ReturnsDecryptedData #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net9.0::Tests.EncryptionFacadeIntegrationTests.DecryptData_ValidInput_ReturnsDecryptedData&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c227659c_002De995_002D4630_002D9b85_002Df02e5546e8bd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #10" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c915e830_002D4355_002D43ae_002Da8a3_002De30fede08f48/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d579dc29_002D48ca_002D4758_002D9354_002Dd06a22289291/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EncryptData_ValidInput_ReturnsEncryptedDataAndHash #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
@@ -73,11 +185,23 @@
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dcd089d0_002D02ce_002D4604_002Daf01_002D7a0baef71b0e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EncryptData_ValidInput_ReturnsEncryptedDataAndHash" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeIntegrationTests.EncryptData_ValidInput_ReturnsEncryptedDataAndHash&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;ProjectFile&gt;307AB522-EEBF-47D8-8219-DF585FC52A0F/f:EncryptionFacadeIntegrationTests.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e5880e06_002Dff94_002D450f_002Db657_002Dc0ab9c0a666c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EncryptData_ReturnsEncryptedString_WhenValidHttpPayload" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e68692a8_002D64a6_002D42dd_002D9211_002D29b7e87e6146/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #8" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Not&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Not&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f75ca422_002Df671_002D4e44_002D94dc_002D09a61795ccd8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session #13" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Not&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;xUnit::307AB522-EEBF-47D8-8219-DF585FC52A0F::net8.0::Tests.EncryptionFacadeTests&lt;/TestId&gt;&#xD;

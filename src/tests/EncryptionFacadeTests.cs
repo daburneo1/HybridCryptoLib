@@ -56,7 +56,7 @@ namespace Tests
             var decryptedData = "decrypted data";
 
             _mockEncryptionService
-                .Setup(s => s.DecryptData(It.IsAny<byte[]>(), It.IsAny<byte[]>(), privateKey))
+                .Setup(s => s.DecryptData(It.IsAny<string>(), It.IsAny<string>(), privateKey))
                 .Returns(decryptedData);
 
             var result = _encryptionFacade.DecryptData(encryptedData, encryptedHash, privateKey);

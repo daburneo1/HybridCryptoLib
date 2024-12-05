@@ -1,7 +1,21 @@
-﻿namespace HybridCryptoLib.Domain;
-
-public class EncryptedData(byte[] data, bool isValid)
+﻿namespace HybridCryptoLib.Domain
 {
-    public byte[] Data { get; } = data;
-    public bool IsValid { get; } = isValid;
+    public class EncryptedData
+    {
+        public string Data { get; set; } = string.Empty;
+        public bool IsEncrypted { get; set; }
+
+        public EncryptedData() { }
+
+        public EncryptedData(string data, bool isEncrypted)
+        {
+            Data = data;
+            IsEncrypted = isEncrypted;
+        }
+
+        public byte[] GetDataBytes()
+        {
+            return Convert.FromBase64String(Data);
+        }
+    }
 }
