@@ -28,39 +28,15 @@ public class AesEncryptionAlgorithm : IEncryptionAlgorithm
 
     public byte[] Decrypt(EncryptedData encryptedData, string key)
     {
-        var parts = encryptedData.Data.Split(';');
-        if (parts.Length != 2)
-        {
-            throw new FormatException("Invalid encrypted data format. Expected IV and cipher text separated by ':'.");
-        }
-
-        // Decodifica IV y datos cifrados desde Base64
-        var iv = Convert.FromBase64String(parts[0]);
-        var cipherText = Convert.FromBase64String(parts[1]);
-
-        // Verifica tamaños
-        if (iv.Length != 16)
-        {
-            throw new CryptographicException("Invalid IV length. Expected 16 bytes.");
-        }
-
-        // Decodifica la clave AES
-        var keyBytes = Encoding.UTF8.GetBytes(key);
-        if (keyBytes.Length != 16 && keyBytes.Length != 24 && keyBytes.Length != 32)
-        {
-            throw new CryptographicException("Invalid AES key length.");
-        }
-
-        // Configura AES
+        var keyBytes = SHA512.HashData(Encoding.UTF8.GetBytes(key));
         using (var aes = Aes.Create())
         {
-            aes.Key = keyBytes;
-            aes.IV = iv;
-            aes.Padding = PaddingMode.PKCS7; // Debe coincidir con el cliente
-
-            using (var decryptor = aes.CreateDecryptor())
+            aes.Key = keyBytes.Take(32).ToArray(); // Use the first 32 bytes of the SHA-512 hash
+            aes.IV = Convert.FromBase64String(encryptedData.Data).Take(aes.IV.Length).ToArray();
+            aes.Padding = PaddingMode.PKCS7; // Ensure consistent padding mode
+            using (var decryptor = aes.CreateDecryptor(aes.Key, aes.IV))
             {
-                return PerformCryptography(cipherText, decryptor);
+                return PerformCryptography(Convert.FromBase64String(encryptedData.Data).Skip(aes.IV.Length).ToArray(), decryptor);
             }
         }
     }
