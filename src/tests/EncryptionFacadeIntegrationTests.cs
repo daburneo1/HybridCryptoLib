@@ -49,7 +49,7 @@ namespace Tests
             var privateKey = RsaUtils.ReadPrivateKey(privateKeyPath);
 
             var encryptedResult = _encryptionFacade.EncryptData(jsonData, hash, publicKey);
-            var decryptedData = _encryptionFacade.DecryptData(encryptedResult.EncryptedData, encryptedResult.EncryptedHash, privateKey);
+            var decryptedData = _encryptionFacade.DecryptData("WUGp9SlKP66OUVnWlyD+aKnzXt1QxoEjkAUSh9n+z7BbRyA1VTxqNFWK4R173YRX", "RIqpm0L7DJqz4L3VAY0AD5Q6QFdVCJjkB05qSnp29QlTRpsYhavGQL8OirTFa6VpG3Gq3DzR082KqUUWZmaUUy04vV/LOfewbxn2csy3HWvvfZznPwwTyKRugErC2NT8CoGEh0PaR46yTlYTZa//m28Z4PWqZa0GsuKwcHpjw8M8QPQyt0qNBRIStZO9ZsE80v9/5y3rOqCi9DLVZRVx4AMMnHA24JD2fxIajCTMxqOKyAKBzWy2WlxQZ9hs+n2rAzj1EQhy4A++aedxqccLN6rdZfm9RgYv1m0w3umRq4O/QRCGUIyqRVnIU3/XupARQ1cU59mSnu00D9L2eGVtWA==", privateKey);
 
             Assert.Equal(jsonData, decryptedData);
         }
